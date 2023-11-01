@@ -308,7 +308,7 @@ class Ping(object):
 				evalue = etype(
 					"%s - Note that ICMP messages can only be send from processes running as root." % evalue
 				)
-				raise etype, evalue, etb
+				raise (etype, evalue, etb)
 			raise # raise the original error
 
 		send_time = self.send_one_ping(current_socket)
