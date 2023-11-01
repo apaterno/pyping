@@ -301,8 +301,8 @@ class Ping(object):
 			if self.bind:
 				current_socket.bind((self.bind, 0)) # Port number is irrelevant for ICMP
 
-		except socket.error, (errno, msg):
-			if errno == 1:
+		except socket.error as e:
+			if e.errno == 1:
 				# Operation not permitted - Add more information to traceback
 				etype, evalue, etb = sys.exc_info()
 				evalue = etype(
