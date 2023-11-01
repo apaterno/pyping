@@ -167,7 +167,7 @@ class Ping(object):
 		else:
 			print(msg)
 
-		raise Exception, "unknown_host"
+		raise Exception("unknown_host")
 		#sys.exit(-1)
 
 	def print_success(self, delay, ip, packet_size, ip_header, icmp_header):
